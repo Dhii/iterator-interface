@@ -50,5 +50,9 @@ class RecursiveIteratorInterfaceTest extends TestCase
 
         $this->assertInstanceOf(static::TEST_SUBJECT_CLASSNAME, $subject, 'A valid instance of the test subject could not be created');
         $this->assertInstanceOf('Dhii\\Iterator\\IteratorInterface', $subject, 'Subject does not implement required interface');
+
+        $this->assertTrue(defined(sprintf('%1$s::%2$s', static::TEST_SUBJECT_CLASSNAME, 'MODE_LEAVES_ONLY')));
+        $this->assertTrue(defined(sprintf('%1$s::%2$s', static::TEST_SUBJECT_CLASSNAME, 'MODE_SELF_FIRST')));
+        $this->assertTrue(defined(sprintf('%1$s::%2$s', static::TEST_SUBJECT_CLASSNAME, 'MODE_CHILD_FIRST')));
     }
 }
