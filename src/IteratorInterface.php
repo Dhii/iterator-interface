@@ -3,6 +3,7 @@
 namespace Dhii\Iterator;
 
 use Iterator;
+use Dhii\Iterator\Exception\IteratorExceptionInterface;
 
 /**
  * Something that can be iterated over.
@@ -29,4 +30,22 @@ interface IteratorInterface extends
      * @return IterationInterface The current iteration state.
      */
     public function getCurrent();
+
+    /**
+     * {@inheritdoc}
+     *
+     * @since [*next-version*]
+     *
+     * @throws IteratorExceptionInterface If something goes wrong while advancing.
+     */
+    public function next();
+
+    /**
+     * {@inheritdoc}
+     *
+     * @since [*next-version*]
+     *
+     * @throws IteratorExceptionInterface If something goes wrong while rewinding.
+     */
+    public function rewind();
 }
