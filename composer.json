@@ -14,7 +14,7 @@
     "require": {
         "php": "^5.3 | ^7.0",
         "dhii/data-key-value-aware-interface": "^0.1",
-        "dhii/data-path-aware-interface": "dev-task/add-path-segments-aware",
+        "dhii/data-path-aware-interface": "^0.1",
         "dhii/data-hierarchy-interface": "^0.1"
     },
     "require-dev": {
