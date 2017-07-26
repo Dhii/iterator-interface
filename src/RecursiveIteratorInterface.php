@@ -42,5 +42,5 @@ interface RecursiveIteratorInterface extends IteratorInterface
      *
      * @return RecursiveIterationInterface The current iteration.
      */
-    public function getCurrent();
+    public function getIteration();
 }

@@ -5,7 +5,7 @@ namespace Dhii\Iterator\UnitTest;
 use Xpmock\TestCase;
 
 /**
- * Tests {@see \Dhii\Iterator\CurrentAwareInterface}.
+ * Tests {@see \Dhii\Iterator\IterationAwareInterface}.
  *
  * @since [*next-version*]
  */
@@ -16,19 +16,19 @@ class CurrentAwareInterfaceTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Iterator\\CurrentAwareInterface';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Iterator\\IterationAwareInterface';
 
     /**
      * Creates a new instance of the test subject.
      *
      * @since [*next-version*]
      *
-     * @return \Dhii\Iterator\CurrentAwareInterface
+     * @return \Dhii\Iterator\IterationAwareInterface
      */
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-                ->getCurrent()
+                ->getIteration()
                 ->new();
 
         return $mock;

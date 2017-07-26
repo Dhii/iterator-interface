@@ -28,7 +28,7 @@ class IteratorInterfaceTest extends TestCase
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-                ->getCurrent()
+                ->getIteration()
                 ->current()
                 ->next()
                 ->valid()
@@ -49,7 +49,7 @@ class IteratorInterfaceTest extends TestCase
         $subject = $this->createInstance();
 
         $this->assertInstanceOf(static::TEST_SUBJECT_CLASSNAME, $subject, 'A valid instance of the test subject could not be created');
-        $this->assertInstanceOf('Dhii\\Iterator\\CurrentAwareInterface', $subject, 'Subject does not implement required interface');
+        $this->assertInstanceOf('Dhii\\Iterator\\IterationAwareInterface', $subject, 'Subject does not implement required interface');
         $this->assertInstanceOf('Iterator', $subject, 'Subject does not implement required interface');
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Dhii\Iterator\Exception;
 
-use Dhii\Iterator\CurrentAwareInterface;
+use Dhii\Iterator\IterationAwareInterface;
 use Dhii\Iterator\IterationInterface;
 
 /**
@@ -12,7 +12,7 @@ use Dhii\Iterator\IterationInterface;
  */
 interface IterationExceptionInterface extends
         IteratingExceptionInterface,
-        CurrentAwareInterface
+        IterationAwareInterface
 {
     /**
      * Retrieves the iteration associated with this instance.
@@ -21,5 +21,5 @@ interface IterationExceptionInterface extends
      *
      * @return IterationInterface|null The iteration, if any.
      */
-    public function getCurrent();
+    public function getIteration();
 }

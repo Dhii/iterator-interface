@@ -20,17 +20,8 @@ use Dhii\Iterator\Exception\IteratorExceptionInterface;
  */
 interface IteratorInterface extends
         Iterator,
-        CurrentAwareInterface
+        IterationAwareInterface
 {
-    /**
-     * Retrieves the state of the current iteration.
-     *
-     * @since [*next-version*]
-     * 
-     * @return IterationInterface The current iteration state.
-     */
-    public function getCurrent();
-
     /**
      * {@inheritdoc}
      *

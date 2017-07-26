@@ -7,7 +7,7 @@ namespace Dhii\Iterator;
  *
  * @since [*next-version*]
  */
-interface CurrentAwareInterface
+interface IterationAwareInterface
 {
     /**
      * Retrieves a representation of the current temporary state.
@@ -16,5 +16,5 @@ interface CurrentAwareInterface
      *
      * @return mixed The state.
      */
-    public function getCurrent();
+    public function getIteration();
 }

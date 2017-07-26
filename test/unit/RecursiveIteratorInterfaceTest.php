@@ -33,7 +33,7 @@ class RecursiveIteratorInterfaceTest extends TestCase
                 ->rewind()
                 ->next()
                 ->valid()
-                ->getCurrent()
+                ->getIteration()
                 ->new();
 
         return $mock;
