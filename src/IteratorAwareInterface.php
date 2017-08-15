@@ -5,14 +5,14 @@ namespace Dhii\Iterator;
 /**
  * Something that can have an iterator retrieved from it.
  *
- * @since [*next-version*]
+ * @since 0.1
  */
 interface IteratorAwareInterface
 {
     /**
      * Retrieves the iterator associated with this instance.
      *
-     * @since [*next-version*]
+     * @since 0.1
      *
      * @return IteratorInterface|null The iterator, if any.
      */

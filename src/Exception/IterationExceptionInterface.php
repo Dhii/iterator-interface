@@ -8,7 +8,7 @@ use Dhii\Iterator\IterationInterface;
 /**
  * An exception that occurs in relation to an iteration.
  *
- * @since [*next-version*]
+ * @since 0.1
  */
 interface IterationExceptionInterface extends
         IteratingExceptionInterface,
@@ -17,7 +17,7 @@ interface IterationExceptionInterface extends
     /**
      * Retrieves the iteration associated with this instance.
      *
-     * @since [*next-version*]
+     * @since 0.1
      *
      * @return IterationInterface|null The iteration, if any.
      */

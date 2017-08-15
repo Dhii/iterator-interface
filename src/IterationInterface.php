@@ -7,7 +7,7 @@ use Dhii\Data\KeyValueAwareInterface;
 /**
  * Represents the state of the current iteration.
  *
- * @since [*next-version*]
+ * @since 0.1
  */
 interface IterationInterface extends KeyValueAwareInterface
 {

@@ -5,7 +5,7 @@ namespace Dhii\Iterator;
 /**
  * Something that represents a flattened recursive iteration.
  *
- * @since [*next-version*]
+ * @since 0.1
  */
 interface RecursiveIterationInterface extends
         DepthAwareIterationInterface,

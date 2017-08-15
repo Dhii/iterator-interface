@@ -9,7 +9,7 @@ use Dhii\Data\Hierarchy\DepthAwareInterface;
  *
  * Primarily useful for recursive iteration.
  *
- * @since [*next-version*]
+ * @since 0.1
  */
 interface DepthAwareIterationInterface extends
         IterationInterface,

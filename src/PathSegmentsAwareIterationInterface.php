@@ -7,7 +7,7 @@ use Dhii\Data\PathSegmentsAwareInterface;
 /**
  * An iteration which can have segments of its path retrieved.
  *
- * @since [*next-version*]
+ * @since 0.1
  */
 interface PathSegmentsAwareIterationInterface extends
         IterationInterface,

@@ -16,7 +16,7 @@ use Dhii\Iterator\Exception\IteratorExceptionInterface;
  * preventing dependency injection, and proper SoC by conflicting with
  * other helpful interfaces.
  *
- * @since [*next-version*]
+ * @since 0.1
  */
 interface IteratorInterface extends
         Iterator,
@@ -25,7 +25,7 @@ interface IteratorInterface extends
     /**
      * {@inheritdoc}
      *
-     * @since [*next-version*]
+     * @since 0.1
      *
      * @throws IteratorExceptionInterface If something goes wrong while advancing.
      */
@@ -34,7 +34,7 @@ interface IteratorInterface extends
     /**
      * {@inheritdoc}
      *
-     * @since [*next-version*]
+     * @since 0.1
      *
      * @throws IteratorExceptionInterface If something goes wrong while rewinding.
      */
