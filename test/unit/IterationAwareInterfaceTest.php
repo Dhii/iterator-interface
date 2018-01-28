@@ -3,27 +3,28 @@
 namespace Dhii\Iterator\UnitTest;
 
 use Xpmock\TestCase;
+use Dhii\Iterator\IterationAwareInterface as TestSubject;
 
 /**
- * Tests {@see \Dhii\Iterator\IterationAwareInterface}.
+ * Tests {@see TestSubject}.
  *
  * @since [*next-version*]
  */
-class CurrentAwareInterfaceTest extends TestCase
+class IterationAwareInterfaceTest extends TestCase
 {
     /**
      * The name of the test subject.
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Iterator\\IterationAwareInterface';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\Iterator\IterationAwareInterface';
 
     /**
      * Creates a new instance of the test subject.
      *
      * @since [*next-version*]
      *
-     * @return \Dhii\Iterator\IterationAwareInterface
+     * @return TestSubject
      */
     public function createInstance()
     {
