@@ -3,9 +3,11 @@
 namespace Dhii\Iterator\UnitTest;
 
 use Xpmock\TestCase;
+use Dhii\Iterator\Exception\IteratorExceptionInterface as TestSubject;
+use PHPUnit_Framework_MockObject_MockObject as MockObject;
 
 /**
- * Tests {@see \Dhii\Iterator\Exception\IteratorExceptionInterface}.
+ * Tests {@see TestSubject}.
  *
  * @since [*next-version*]
  */
@@ -16,18 +18,27 @@ class IteratorExceptionInterfaceTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Iterator\\Exception\\IteratorExceptionInterface';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\Iterator\Exception\IteratorExceptionInterface';
 
     /**
      * Creates a new instance of the test subject.
      *
      * @since [*next-version*]
      *
-     * @return \Dhii\Iterator\Exception\IteratorExceptionInterface
+     * @return TestSubject|MockObject
      */
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
+                ->getMessage()
+                ->getCode()
+                ->getPrevious()
+                ->getFile()
+                ->getLine()
+                ->getTrace()
+                ->getTraceAsString()
+                ->__toString()
+
                 ->getIterator()
                 ->new();
 
@@ -44,7 +55,7 @@ class IteratorExceptionInterfaceTest extends TestCase
         $subject = $this->createInstance();
 
         $this->assertInstanceOf(static::TEST_SUBJECT_CLASSNAME, $subject, 'A valid instance of the test subject could not be created');
-        $this->assertInstanceOf('Dhii\\Iterator\\Exception\\IteratingExceptionInterface', $subject, 'Subject does not implement required interface');
-        $this->assertInstanceOf('Dhii\\Iterator\\IteratorAwareInterface', $subject, 'Subject does not implement required interface');
+        $this->assertInstanceOf('Dhii\Iterator\Exception\IteratingExceptionInterface', $subject, 'Subject does not implement required interface');
+        $this->assertInstanceOf('Dhii\Iterator\IteratorAwareInterface', $subject, 'Subject does not implement required interface');
     }
 }

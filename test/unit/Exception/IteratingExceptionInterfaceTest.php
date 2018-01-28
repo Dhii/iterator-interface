@@ -3,9 +3,11 @@
 namespace Dhii\Iterator\UnitTest;
 
 use Xpmock\TestCase;
+use Dhii\Iterator\Exception\IteratingExceptionInterface as TestSubject;
+use PHPUnit_Framework_MockObject_MockObject as MockObject;
 
 /**
- * Tests {@see \Dhii\Iterator\Exception\IteratingExceptionInterface}.
+ * Tests {@see TestSubject}.
  *
  * @since [*next-version*]
  */
@@ -16,18 +18,26 @@ class IteratingExceptionInterfaceTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Iterator\\Exception\\IteratingExceptionInterface';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\Iterator\Exception\IteratingExceptionInterface';
 
     /**
      * Creates a new instance of the test subject.
      *
      * @since [*next-version*]
      *
-     * @return \Dhii\Iterator\Exception\IteratingExceptionInterface
+     * @return TestSubject|MockObject
      */
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
+                ->getMessage()
+                ->getCode()
+                ->getPrevious()
+                ->getFile()
+                ->getLine()
+                ->getTrace()
+                ->getTraceAsString()
+                ->__toString()
                 ->new();
 
         return $mock;
@@ -43,5 +53,6 @@ class IteratingExceptionInterfaceTest extends TestCase
         $subject = $this->createInstance();
 
         $this->assertInstanceOf(static::TEST_SUBJECT_CLASSNAME, $subject, 'A valid instance of the test subject could not be created');
+        $this->assertInstanceOf('Dhii\Exception\ThrowableInterface', $subject, 'Subject does not implement required interface');
     }
 }
