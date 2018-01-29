@@ -3,3 +3,10 @@
 /test/coverage/
 /test/log/
 /build/
+/.idea/dictionaries/
+/.idea/inspectionProfiles
+/.idea/workspace.xml
+/.idea/tasks.xml
+/.idea/misc.xml
+/.idea/vagrant.xml
+/.idea/deployment.xml
