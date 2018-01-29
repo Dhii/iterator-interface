@@ -14,7 +14,7 @@ interface IterationAwareInterface
      *
      * @since [*next-version*]
      *
-     * @return mixed The state.
+     * @return IterationInterface The state.
      */
     public function getIteration();
 }
