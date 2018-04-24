@@ -31,7 +31,9 @@ throw a specific kind of meaningful exception when rewinding or advancing.
 and the path to the current iteration in that hierarchy.
 - [`DepthAwareIterationInterface`] - An iteration that can tell how deep it is in a hierarchy.
 - [`PathSegmentsAwareIterationInterface`] - An iteration that can tell the path to itself in a hierarchy.
-
+- [`IteratingExceptionInterface`] - An exception that can occur during iteration.
+- [`IterationExceptionInterface`] - An iterating exception that relates to an iteration.
+- [`IteratorExceptionInterface`] - An iteration exception that relates to an iterator.
 
 
 [Dhii]: https://github.com/Dhii/dhii
@@ -47,3 +49,6 @@ and the path to the current iteration in that hierarchy.
 [`RecursiveIterationInterface`]:                    src/RecursiveIterationInterface.php
 [`DepthAwareIterationInterface`]:                   src/DepthAwareIterationInterface.php
 [`PathSegmentsAwareIterationInterface`]:            src/PathSegmentsAwareIterationInterface.php
+[`IteratingExceptionInterface`]:                    src/Exception/IteratingExceptionInterface.php
+[`IterationExceptionInterface`]:                    src/Exception/IterationExceptionInterface.php
+[`IteratorExceptionInterface`]:                     src/Exception/IteratorExceptionInterface.php
